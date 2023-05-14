@@ -2,12 +2,11 @@
   "name": "@ranwawa/conventions",
   "version": "0.0.1",
   "description": "前端规范",
-  "private": false,
+  "private": true,
   "workspace": true,
   "workspaces": [
-    "./packages/*",
-    "./packages/docs",
-    "./packages/eslint-plugin"
+    "./packages/eslint-plugin",
+    "./packages/configurations"
   ],
   "keywords": [],
   "main": "index.js",
@@ -15,7 +14,9 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "commit": "git-cz",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,18 @@
   "author": "ranwawa <274544338@qq.com> (https://github.com/ranwawa)",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "*",
+    "@ranwawa/configurations": "workspace:*",
+    "@ranwawa/eslint-plugin": "workspace:*",
+    "conventional-changelog-conventionalcommits": "*",
+    "eslint-plugin-markdown": "^3.0.0",
+    "git-cz": "*",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
     "vitepress": "1.0.0-alpha.45",
     "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "jest": "^29.5.0"
   }
 }
