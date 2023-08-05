@@ -1,5 +1,8 @@
 # OS
-.DS_Store
+.Ds_Store
+
+# IDE
+.vscode/
 
 # Logs
 logs
